@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatelessWidget {
 
-   String fromTextField;
+  String fromTextField;
   final Function callback;
 
   AddTaskScreen({this.fromTextField,this.callback});
