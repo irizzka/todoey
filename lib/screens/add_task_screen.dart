@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey/models/task.dart';
+import 'package:todoey/provider/task_data.dart';
 
 class AddTaskScreen extends StatelessWidget {
 
   String fromTextField;
-  final Function callback;
+ // final Function callback;
 
-  AddTaskScreen({this.fromTextField,this.callback});
+  AddTaskScreen({this.fromTextField});
 
 
   @override
@@ -42,7 +45,10 @@ class AddTaskScreen extends StatelessWidget {
               style: TextStyle(color: Colors.white),),
               color: Colors.lightBlueAccent,
               onPressed: (){
-                callback(fromTextField);
+              //  callback(fromTextField);
+              //  final task = Task(name: fromTextField);
+                Provider.of<Data>(context).addTaskToList(fromTextField);
+                Navigator.pop(context);
               },
               ),
             ],
