@@ -25,11 +25,7 @@ class Data extends ChangeNotifier {
     notifyListeners();
   }
 
-  int getListLength(){
-    return _tasks.length;
-  }
+  int getListLength() => _tasks.length;
 
-  Task getElement(int index){
-    return _tasks[index];
-  }
+  Task getElement(int index) => _tasks[index];
 }

@@ -6,10 +6,7 @@ import 'package:todoey/provider/task_data.dart';
 class AddTaskScreen extends StatelessWidget {
 
   String fromTextField;
- // final Function callback;
-
   AddTaskScreen({this.fromTextField});
-
 
   @override
   Widget build(BuildContext context) {
